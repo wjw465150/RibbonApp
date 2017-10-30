@@ -16,7 +16,6 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class RibbonApplication implements EnvironmentAware {
 	private static Logger log = LoggerFactory.getLogger(RibbonApplication.class);
-	private Environment env;
 
 	public static void main(String[] args) {
 		// SpringApplication.run(RibbonApplication.class, args);
@@ -24,8 +23,7 @@ public class RibbonApplication implements EnvironmentAware {
 	}
 
 	@Override
-	public void setEnvironment(Environment environment) {
-		this.env = environment;
+	public void setEnvironment(Environment env) {
 		String[] dProfiles = env.getDefaultProfiles();
 		String[] aProfiles = env.getActiveProfiles();
 

@@ -14,7 +14,7 @@ eureka:
       defaultZone:  http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${eureka.server.port}/eureka/
 
   instance:
-    hostname: localhost
+    hostname: 192.168.2.114
 
   #指定环境
   environment: dev
